@@ -13,6 +13,26 @@
   gtag('config', 'AW-18280484715');
 </script>
 
+<!-- Google Ads Conversion Tracking -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18280484715/uwmoCOfMlMccEOue6IxE',
+      'value': 1.0,
+      'currency': 'INR',
+      'event_callback': callback
+  });
+
+  return false;
+}
+</script>
+
 <title>Jai Baba Mohan Ram Hotel</title>
 
 <link rel="stylesheet" href="css/style.css">
@@ -227,7 +247,7 @@ Luxury room with premium facilities
 
 <p>
 📞 Call: 
-<a href="tel:8950142217">
+<a href="tel:8950142217" onclick="return gtag_report_conversion('tel:8950142217');">
 8950142217
 </a>
 </p>
@@ -238,7 +258,7 @@ Luxury room with premium facilities
 
 💬 WhatsApp:
 
-<a href="https://wa.me/918950142217" target="_blank">
+<a href="https://wa.me/918950142217" onclick="return gtag_report_conversion('https://wa.me/918950142217');" target="_blank">
 Chat Now
 </a>
 
